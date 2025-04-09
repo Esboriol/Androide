@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingTop="?attr/actionBarSize">
+
+    <!-- Spinners (Moedas) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Spinner
+            android:id="@+id/spinner_origem"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_destino"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Campo de Valor -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_valor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o valor"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botão -->
+    <Button
+        android:id="@+id/btn_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Converter" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>
